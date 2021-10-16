@@ -1,0 +1,26 @@
+﻿<Window x:Class="Tic_Tac_Toe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tic_Tac_Toe"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+         TextElement.FontWeight="Regular"
+         TextElement.FontSize="13"
+         TextOptions.TextFormattingMode="Ideal"
+         TextOptions.TextRenderingMode="Auto"
+         Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="MainWindow" Height="307.895" Width="323.823">
+    <StackPanel Margin="20">
+        <TextBlock TextAlignment="Center" FontSize="40" FontWeight="Bold">Tic Tac Tie</TextBlock>
+        <Label>Player 1:</Label>
+        <TextBox Name="player1NameBox"></TextBox>
+        <Label>Player 2:</Label>
+        <TextBox Name="player2NameBox"></TextBox>
+
+        <Button Width="150" Margin="10,15" Click="Button_Click">Start Game</Button>
+    </StackPanel>
+</Window>
