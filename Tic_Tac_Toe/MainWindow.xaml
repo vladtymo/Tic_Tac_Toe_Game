@@ -13,13 +13,15 @@
          TextOptions.TextRenderingMode="Auto"
          Background="{DynamicResource MaterialDesignPaper}"
          FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="MainWindow" Height="307.895" Width="323.823">
+        Title="MainWindow" Height="320" MinHeight="320" Width="330">
     <StackPanel Margin="20">
-        <TextBlock TextAlignment="Center" FontSize="40" FontWeight="Bold">Tic Tac Tie</TextBlock>
-        <Label>Player 1:</Label>
-        <TextBox Name="player1NameBox"></TextBox>
-        <Label>Player 2:</Label>
-        <TextBox Name="player2NameBox"></TextBox>
+        <materialDesign:Card Padding="5">
+            <TextBlock TextAlignment="Center" FontSize="40" FontWeight="Bold">Tic Tac Toe</TextBlock>
+        </materialDesign:Card>
+        <Label FontSize="20" Padding="0,10">Player 1:</Label>
+        <TextBox materialDesign:HintAssist.Hint="Name" Name="player1NameBox"></TextBox>
+        <Label FontSize="20" Padding="0,10">Player 2:</Label>
+        <TextBox materialDesign:HintAssist.Hint="Name" Name="player2NameBox"></TextBox>
 
         <Button Width="150" Margin="10,15" Click="Button_Click">Start Game</Button>
     </StackPanel>

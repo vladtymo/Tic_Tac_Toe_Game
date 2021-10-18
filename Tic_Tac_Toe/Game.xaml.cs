@@ -33,9 +33,9 @@ namespace Tic_Tac_Toe
             Start();
         }
 
+        Random rnd = new Random();
         void Start()
         {
-            Random rnd = new Random();
             if (rnd.Next(2) == 0)
                 currentPlayer.Text = Player1;
             else
@@ -64,6 +64,36 @@ namespace Tic_Tac_Toe
                 (field.Children[0] as Button).Content == (field.Children[1] as Button).Content &&
                 (field.Children[0] as Button).Content == (field.Children[2] as Button).Content)
                 return true;
+            else if ((field.Children[3] as Button).Content != null &&
+                (field.Children[3] as Button).Content == (field.Children[4] as Button).Content &&
+                (field.Children[3] as Button).Content == (field.Children[5] as Button).Content)
+                return true;
+            else if((field.Children[6] as Button).Content != null &&
+                (field.Children[6] as Button).Content == (field.Children[7] as Button).Content &&
+                (field.Children[6] as Button).Content == (field.Children[8] as Button).Content)
+                return true;
+
+            else if((field.Children[0] as Button).Content != null &&
+                (field.Children[0] as Button).Content == (field.Children[3] as Button).Content &&
+                (field.Children[0] as Button).Content == (field.Children[6] as Button).Content)
+                return true;
+            else if((field.Children[1] as Button).Content != null &&
+                (field.Children[1] as Button).Content == (field.Children[4] as Button).Content &&
+                (field.Children[1] as Button).Content == (field.Children[7] as Button).Content)
+                return true;
+            else if((field.Children[2] as Button).Content != null &&
+                (field.Children[2] as Button).Content == (field.Children[5] as Button).Content &&
+                (field.Children[2] as Button).Content == (field.Children[8] as Button).Content)
+                return true;
+
+            else if((field.Children[0] as Button).Content != null &&
+                (field.Children[0] as Button).Content == (field.Children[4] as Button).Content &&
+                (field.Children[0] as Button).Content == (field.Children[8] as Button).Content)
+                return true;
+            else if((field.Children[2] as Button).Content != null &&
+                (field.Children[2] as Button).Content == (field.Children[4] as Button).Content &&
+                (field.Children[2] as Button).Content == (field.Children[6] as Button).Content)
+                return true;
             else
                 return false;
         }
@@ -75,7 +105,6 @@ namespace Tic_Tac_Toe
                 MessageBox.Show("You cannot change the existing move!");
                 return;
             }
-
 
             (sender as Button).Content = IsNextX ? "X" : "O";
 

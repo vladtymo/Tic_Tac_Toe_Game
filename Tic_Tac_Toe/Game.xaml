@@ -13,13 +13,14 @@
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Game" Height="380.721" Width="305.062">
+        Title="Game" Height="380" Width="350">
     <DockPanel>
         <ToolBar DockPanel.Dock="Top">
-            <Button Click="Button_Click_1">Restart</Button>
-            <TextBlock VerticalAlignment="Center" Text="Player "></TextBlock>
+            <Button Height="30" Click="Button_Click_1" Padding="16,5">Restart</Button>
+            <TextBlock Margin="10,0,0,0" VerticalAlignment="Center" Text="Player "></TextBlock>
             <TextBlock Name="currentPlayer" VerticalAlignment="Center" FontWeight="Bold" Text="_name_"></TextBlock>
             <TextBlock VerticalAlignment="Center" Text=" is moving "></TextBlock>
+            
         </ToolBar>
     <UniformGrid Name="field" Columns="3" Rows="3">
             <UniformGrid.Resources>
