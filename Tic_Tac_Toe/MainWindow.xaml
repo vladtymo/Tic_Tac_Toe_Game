@@ -13,8 +13,8 @@
          TextOptions.TextRenderingMode="Auto"
          Background="{DynamicResource MaterialDesignPaper}"
          FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="MainWindow" Height="320" MinHeight="320" Width="330">
-    <StackPanel Margin="20">
+        Title="MainWindow" Height="350" MinHeight="350" Width="330">
+    <StackPanel Margin="20,15">
         <materialDesign:Card Padding="5">
             <TextBlock TextAlignment="Center" FontSize="40" FontWeight="Bold">Tic Tac Toe</TextBlock>
         </materialDesign:Card>
@@ -24,5 +24,14 @@
         <TextBox materialDesign:HintAssist.Hint="Name" Name="player2NameBox"></TextBox>
 
         <Button Width="150" Margin="10,15" Click="Button_Click">Start Game</Button>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <Label>Light</Label>
+            <ToggleButton Style="{StaticResource MaterialDesignSwitchDarkToggleButton}"
+                          ToolTip="MaterialDesignSwitchDarkToggleButton"
+                          Checked="ToggleButton_Checked"
+                          Unchecked="ToggleButton_Unchecked"/>
+            <Label>Dark</Label>
+        </StackPanel>
+        
     </StackPanel>
 </Window>

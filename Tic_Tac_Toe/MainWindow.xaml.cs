@@ -31,5 +31,22 @@ namespace Tic_Tac_Toe
             Game gameWindow = new Game(player1NameBox.Text, player2NameBox.Text);
             gameWindow.Show();
         }
+
+        private void ToggleButton_Checked(object sender, RoutedEventArgs e)
+        {
+            ToggleBaseColour(true);
+        }
+        private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            ToggleBaseColour(false);
+        }
+        private readonly PaletteHelper _paletteHelper = new PaletteHelper();
+        private void ToggleBaseColour(bool isDark)
+        {
+            ITheme theme = _paletteHelper.GetTheme();
+            IBaseTheme baseTheme = isDark ? new MaterialDesignDarkTheme() : (IBaseTheme)new MaterialDesignLightTheme();
+            theme.SetBaseTheme(baseTheme);
+            _paletteHelper.SetTheme(theme);
+        }
     }
 }
